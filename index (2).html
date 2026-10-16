@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#fff4e8">
+<meta name="description" content="Archana Mishra's personal scrapbook: electrical engineering, creativity, travel dreams, films, and the things that make her, her.">
+<title>Archana Mishra — My Digital Scrapbook</title>
+<style>
+ :root {
+  --ink: #403347;
+  --muted: #716578;
+  --paper: #fffaf3;
+  --pink: #f2a8c4;
+  --peach: #f8c9a8;
+  --lilac: #c9b9ee;
+  --mint: #b9ddcb;
+  --yellow: #f6df91;
+  --line: #e8d9cc;
+  --dark-ink: #403347;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 90px; }
+body {
+  margin: 0;
+  color: var(--ink);
+  background-color: #fff4e8;
+  background-image: radial-gradient(#e7cfc0 0.7px, transparent 0.7px);
+  background-size: 18px 18px;
+  font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+  overflow-x: hidden;
+}
+a { color: inherit; }
+button, a { -webkit-tap-highlight-color: transparent; }
+nav {
+  position: sticky; top: 0; z-index: 20;
+  display: flex; justify-content: space-between; align-items: center; gap: 20px;
+  padding: 15px 7%; background: rgba(255,250,243,.94);
+  border-bottom: 2px dashed #e6cfc0;
+}
+.logo { font-weight: 900; letter-spacing: 1.5px; color: #b65d83; white-space: nowrap; }
+.nav-links { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 16px; }
+.nav-links a { text-decoration: none; font-size: 13px; color: var(--muted); transition: color .2s; }
+.nav-links a:hover { color: #b65d83; }
+section { padding: 88px 10%; }
+.hero { min-height: 88vh; display: grid; grid-template-columns: 1.25fr .75fr; align-items: center; gap: 40px; padding-top: 70px; }
+.eyebrow { color: #56836d; text-transform: uppercase; letter-spacing: 2px; font-size: 11px; font-weight: 800; }
+h1 { font-size: clamp(48px, 7vw, 86px); line-height: .99; letter-spacing: -3px; margin: 20px 0; }
+.gradient { color: #b65d83; background: linear-gradient(100deg, #b65d83, #c17b55, #7966a7); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+.hero-copy p, .section-intro { color: var(--muted); line-height: 1.85; max-width: 650px; }
+.hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 25px; }
+.button { display: inline-block; text-decoration: none; padding: 12px 19px; border-radius: 8px 20px 8px 20px; color: #493246; font-weight: 800; background: var(--pink); border: 1px solid #e7a0bb; transition: transform .25s, box-shadow .25s; box-shadow: 3px 4px 0 #e7c8b8; }
+.button:hover { transform: translateY(-3px) rotate(-1deg); box-shadow: 5px 6px 0 #e7c8b8; }
+.button.secondary { color: var(--ink); background: var(--paper); border: 1px dashed #c8aab8; }
+.scrapbook { position: relative; min-height: 390px; display: grid; place-items: center; }
+.paper {
+  position: absolute; width: min(300px, 80vw); min-height: 330px; padding: 24px;
+  color: var(--dark-ink); background: #fffdf7; border: 1px solid #eadbca;
+  box-shadow: 7px 9px 0 #e8d5c6; transform: rotate(-4deg);
+  background-image: repeating-linear-gradient(transparent, transparent 27px, #eadfe6 28px);
+}
+.paper::before { content: ""; position: absolute; width: 92px; height: 24px; top: -10px; left: calc(50% - 46px); background: #f2a8c4cc; transform: rotate(2deg); }
+.paper-top { font-size: 11px; text-transform: uppercase; letter-spacing: 2px; }
+.paper h2 { font-size: 34px; line-height: 1.05; margin: 24px 0 12px; }
+.paper p { font-size: 13px; line-height: 1.6; }
+.sticker { position: absolute; display: grid; place-items: center; border-radius: 50%; width: 75px; height: 75px; font-size: 31px; box-shadow: 3px 5px 0 #d8c5b8; animation: float 4s ease-in-out infinite; }
+.sticker.one { background: var(--mint); color: #253d37; top: 20px; right: 1%; transform: rotate(12deg); }
+.sticker.two { background: var(--lilac); color: #322848; bottom: 8px; left: 2%; animation-delay: -1.4s; }
+.sticker.three { background: var(--yellow); color: #54362d; bottom: 30px; right: 0; width: 58px; height: 58px; font-size: 25px; animation-delay: -.8s; }
+@keyframes float { 0%,100% { translate: 0 0; } 50% { translate: 0 -8px; } }
+.section-head { max-width: 750px; margin-bottom: 30px; }
+.section-title { font-size: clamp(32px, 4.5vw, 53px); line-height: 1.08; margin: 12px 0; letter-spacing: -1.5px; }
+.section-intro { margin-top: 10px; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 18px; margin-top: 28px; }
+.card { position: relative; padding: 24px; border: 1px solid #ead7ca; border-radius: 8px 20px 8px 20px; background: var(--paper); box-shadow: 4px 5px 0 #ead8ca; transition: transform .3s, box-shadow .3s; }
+.card::before { content: ""; position: absolute; top: -8px; left: 24px; width: 54px; height: 15px; background: #f2c4d5b8; transform: rotate(-3deg); }
+.card:hover { transform: translateY(-5px) rotate(-.4deg); box-shadow: 7px 8px 0 #ead8ca; }
+.card .emoji { font-size: 29px; margin-bottom: 12px; }
+.card h3 { margin: 0 0 10px; font-size: 19px; }
+.card p { color: var(--muted); font-size: 14px; line-height: 1.75; margin-bottom: 0; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
+.chip { padding: 8px 12px; border-radius: 5px 12px 5px 12px; border: 1px dashed #cda9b9; color: #9b4f74; font-size: 12px; background: #fffaf3; }
+.timeline { display: grid; gap: 14px; margin-top: 28px; }
+.timeline-item { display: grid; grid-template-columns: 48px 1fr; gap: 15px; align-items: start; }
+.timeline-icon { width: 44px; height: 44px; display: grid; place-items: center; border-radius: 12px; background: #eee6fb; border: 1px dashed #b5a1d9; font-size: 21px; }
+.timeline-content { padding: 18px 20px; border: 1px solid #ead7ca; background: var(--paper); box-shadow: 3px 4px 0 #ead8ca; border-radius: 4px 16px 4px 16px; }
+.timeline-content h3 { margin: 0 0 6px; }
+.timeline-content p { color: var(--muted); line-height: 1.7; margin: 0; font-size: 14px; }
+.tape-label { display: inline-block; padding: 6px 10px; margin-bottom: 10px; border-radius: 3px; color: #403347; background: var(--mint); font-size: 10px; font-weight: 900; letter-spacing: 1px; text-transform: uppercase; transform: rotate(-2deg); }
+.film-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(155px,1fr)); gap: 14px; margin-top: 25px; }
+.film-card { min-height: 185px; padding: 17px; border-radius: 8px 18px 8px 18px; border: 1px solid #e8d4c8; background: #fffdf7; box-shadow: 4px 5px 0 #ead8ca; display: flex; flex-direction: column; justify-content: space-between; transition: transform .25s; }
+.film-card:nth-child(2n) { background: #f8edf3; }
+.film-card:hover { transform: translateY(-5px) rotate(1deg); }
+.film-card .film-emoji { font-size: 28px; }
+.film-card strong { font-size: 16px; }
+.film-card small { color: var(--muted); line-height: 1.5; }
+.travel-note { background: #dcefe3; color: #403347; border: 2px dashed #8db8a0; border-radius: 8px 24px 8px 24px; padding: clamp(24px,5vw,42px); display: grid; grid-template-columns: 1fr auto; gap: 22px; align-items: center; overflow: hidden; box-shadow: 6px 7px 0 #c9dccc; }
+.travel-note h3 { font-size: clamp(28px,4vw,42px); line-height: 1.1; margin: 10px 0; }
+.travel-note p { max-width: 620px; line-height: 1.8; }
+.travel-stamp { width: 120px; height: 120px; display: grid; place-items: center; border: 2px dashed #6d9c80; border-radius: 50%; font-size: 50px; transform: rotate(12deg); }
+.quote { font-size: clamp(24px,4vw,42px); line-height: 1.4; max-width: 850px; }
+.quote-mark { color: #b65d83; font-size: 65px; line-height: .5; }
+footer { padding: 35px 10%; border-top: 2px dashed #e6cfc0; text-align: center; color: var(--muted); font-size: 13px; background: #fffaf3; }
+.reveal { opacity: 0; transform: translateY(24px); transition: opacity .7s ease, transform .7s ease; }
+.reveal.visible { opacity: 1; transform: translateY(0); }
+#typing { display: inline-block; min-height: 1.05em; }
+#clock { color: #9b4f74; font-size: 12px; margin-top: 22px; letter-spacing: .5px; }
+@media (max-width: 760px) {
+  nav { padding: 13px 5%; align-items: flex-start; }
+  .nav-links { gap: 9px 12px; }
+  .nav-links a { font-size: 11px; }
+  .hero { grid-template-columns: 1fr; padding-top: 65px; gap: 10px; }
+  .scrapbook { min-height: 360px; }
+  section { padding: 70px 7%; }
+  h1 { letter-spacing: -1.5px; }
+  .travel-note { grid-template-columns: 1fr; }
+  .travel-stamp { width: 82px; height: 82px; font-size: 35px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; transition-duration: .01ms !important; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="logo" href="#home" style="text-decoration:none">ARCHANA ✦</a>
+  <div class="nav-links" aria-label="Main navigation">
+    <a href="#about">About</a>
+    <a href="#journey">Journey</a>
+    <a href="#creative">Creative side</a>
+    <a href="#watchlist">Watchlist</a>
+    <a href="#travel">Travel dreams</a>
+  </div>
+</nav>
+
+<main>
+  <section class="hero" id="home">
+    <div class="hero-copy">
+      <div class="eyebrow">✿ A scrapbook of the things that make me, me</div>
+      <h1>Hi, I'm<br><span class="gradient">Archana Mishra.</span><br><span id="typing"></span></h1>
+      <p>
+        Electrical engineering student, curious learner, creative soul, and collector
+        of stories — from the screen, the places I visit, and the little moments in between.
+        This is my corner of the internet: a work in progress, just like me.
+      </p>
+      <div class="hero-actions">
+        <a class="button" href="#about">Come on in ↗</a>
+        <a class="button secondary" href="#creative">Explore my creative side ✿</a>
+      </div>
+      <div id="clock" aria-live="polite"></div>
+    </div>
+    <div class="scrapbook" aria-label="Decorative scrapbook card">
+      <div class="paper">
+        <div class="paper-top">little note to self · no. 001</div>
+        <h2>Stay curious.<br>Make things.<br>Collect moments.</h2>
+        <p>Learning the technical stuff, chasing creative ideas, and leaving a little room for the unexpected.</p>
+        <div style="font-size:22px;letter-spacing:8px;margin-top:20px">✦ ♡ ✿</div>
+        <p style="font-size:10px;letter-spacing:2px;margin-top:22px">ARCHANA'S PERSONAL SCRAPBOOK</p>
+      </div>
+      <div class="sticker one" title="Curiosity">✧</div>
+      <div class="sticker two" title="Creativity">🎨</div>
+      <div class="sticker three" title="Travel">✈</div>
+    </div>
+  </section>
+
+  <section id="about" class="reveal">
+    <div class="section-head">
+      <div class="eyebrow">01 / The person behind the page</div>
+      <h2 class="section-title">A little bit of <span class="gradient">everything.</span></h2>
+      <p class="section-intro">
+        I'm studying Electrical Engineering at Veer Surendra Sai University of Technology
+        (VSSUT), Burla. I enjoy understanding how things work, learning new skills, and
+        finding creative ways to express ideas. Engineering is one part of my story —
+        design, films, travel, and everyday discoveries are part of it too.
+      </p>
+    </div>
+    <div class="grid">
+      <article class="card"><div class="emoji">⚡</div><h3>The problem-solver</h3><p>Electrical engineering gives me ways to explore systems, think logically, and work through challenges one step at a time.</p></article>
+      <article class="card"><div class="emoji">🎨</div><h3>The creative one</h3><p>Graphic design, painting, and journaling give me space to play with ideas and turn feelings or inspiration into something visual.</p></article>
+      <article class="card"><div class="emoji">🎥</div><h3>The storyteller</h3><p>I'm interested in vlogging and capturing experiences — little moments, new places, and stories worth remembering.</p></article>
+    </div>
+  </section>
+
+  <section id="journey" class="reveal">
+    <div class="section-head">
+      <div class="eyebrow">02 / Learning log</div>
+      <h2 class="section-title">My journey, <span class="gradient">one chapter at a time.</span></h2>
+      <p class="section-intro">A snapshot of what I've studied, explored, and am working to learn. This page can grow as my journey does.</p>
+    </div>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-icon">🎓</div>
+        <div class="timeline-content"><span class="tape-label">Education</span><h3>Electrical Engineering</h3><p>Currently studying at Veer Surendra Sai University of Technology (VSSUT), Burla.</p></div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-icon">🧰</div>
+        <div class="timeline-content"><span class="tape-label">Tools & training</span><h3>Exploring engineering tools</h3><p>My learning includes MATLAB, AutoCAD, and SCADA, alongside the fundamentals of electrical engineering.</p></div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-icon">💻</div>
+        <div class="timeline-content"><span class="tape-label">Currently learning</span><h3>Web development & software engineering</h3><p>I'm exploring HTML, CSS, JavaScript, programming, and software engineering — building new skills by making things and learning as I go.</p></div>
+      </div>
+    </div>
+    <div class="chips" aria-label="Skills">
+      <span class="chip">Electrical Engineering</span><span class="chip">MATLAB</span><span class="chip">AutoCAD</span><span class="chip">SCADA</span><span class="chip">HTML / CSS / JavaScript</span><span class="chip">Programming — learning</span>
+    </div>
+  </section>
+
+  <section id="projects" class="reveal">
+    <div class="section-head">
+      <div class="eyebrow">03 / The project shelf</div>
+      <h2 class="section-title">Ideas I've been <span class="gradient">exploring.</span></h2>
+      <p class="section-intro">A few engineering and learning projects that reflect my curiosity. Each one represents concepts I've explored, not a claim of a finished product or award.</p>
+    </div>
+    <div class="grid">
+      <article class="card"><div class="emoji">🚗</div><h3>EV BLDC Motor Control</h3><p>Exploring PID speed control and torque ripple reduction in brushless DC motors for electric vehicle applications.</p><div class="chips"><span class="chip">EV</span><span class="chip">Control systems</span></div></article>
+      <article class="card"><div class="emoji">🌱</div><h3>Smart Irrigation</h3><p>A project concept using soil-moisture feedback and a pump to support more responsive watering.</p><div class="chips"><span class="chip">Sensors</span><span class="chip">Automation</span></div></article>
+      <article class="card"><div class="emoji">☀️</div><h3>PV Inverter Control</h3><p>Learning about solar PV systems and exploring Sliding Mode Control (SMC) as an alternative controller approach.</p><div class="chips"><span class="chip">Solar PV</span><span class="chip">MATLAB / Simulink</span></div></article>
+    </div>
+  </section>
+
+  <section id="creative" class="reveal">
+    <div class="section-head">
+      <div class="eyebrow">04 / Outside the lecture notes</div>
+      <h2 class="section-title">Welcome to my <span class="gradient">creative corner.</span></h2>
+      <p class="section-intro">Not everything has to be a technical project. Sometimes it can be a design, a page in a journal, a video, or a moment I wanted to keep.</p>
+    </div>
+    <div class="grid">
+      <article class="card"><div class="emoji">🖼️</div><h3>Graphic design</h3><p>Playing with layouts, typography, colours, and visual ideas. This space can become a gallery for my designs and edits.</p></article>
+      <article class="card"><div class="emoji">📹</div><h3>Vlogging & visual diaries</h3><p>Capturing experiences and turning little everyday moments into stories. The best memories deserve a replay.</p></article>
+      <article class="card"><div class="emoji">🖌️</div><h3>Painting & journaling</h3><p>A slower, more personal kind of creativity — making things by hand, collecting thoughts, and giving ideas somewhere to live.</p></article>
+      <article class="card"><div class="emoji">🌍</div><h3>Curious about the world</h3><p>I love discovering other places and cuisines. Food can be its own kind of travel, even before the actual trip.</p></article>
+    </div>
+  </section>
+
+  <section id="watchlist" class="reveal">
+    <div class="section-head">
+      <div class="eyebrow">05 / Popcorn, plot twists & late-night episodes</div>
+      <h2 class="section-title">My little <span class="gradient">screen universe.</span></h2>
+      <p class="section-intro">Sci-fi, thriller, suspense, and rom-coms — depending on the mood. Here are some shows on my favourites list.</p>
+    </div>
+    <div class="film-grid">
+      <article class="film-card"><div class="film-emoji">🚲</div><strong>Stranger Things</strong><small>Supernatural mystery · sci-fi vibes</small></article>
+      <article class="film-card"><div class="film-emoji">🎭</div><strong>Money Heist</strong><small>Heists, tension, and twists</small></article>
+      <article class="film-card"><div class="film-emoji">🔺</div><strong>Squid Game</strong><small>Survival thriller · high stakes</small></article>
+      <article class="film-card"><div class="film-emoji">🃏</div><strong>Alice in Borderland</strong><small>Mystery, games, and suspense</small></article>
+    </div>
+    <div class="chips"><span class="chip">Sci-fi</span><span class="chip">Thriller</span><span class="chip">Suspense</span><span class="chip">Rom-com</span></div>
+  </section>
+
+  <section id="travel" class="reveal">
+    <div class="section-head">
+      <div class="eyebrow">06 / Passport dreams</div>
+      <h2 class="section-title">Next stop: <span class="gradient">somewhere new.</span></h2>
+    </div>
+    <div class="travel-note">
+      <div>
+        <div class="eyebrow" style="color:#40344b">Dream destination · travel wish list</div>
+        <h3>日本 Japan 🇯🇵</h3>
+        <p>Japan is my dream destination — a place I'd love to explore, experience, and capture through photos and vlogs. And beyond one destination, I want to discover cuisines from all over the world. New places, new flavours, new stories.</p>
+        <div class="chips"><span class="chip" style="color:#40344b;border-color:#40344b66">Travel</span><span class="chip" style="color:#40344b;border-color:#40344b66">Food discoveries</span><span class="chip" style="color:#40344b;border-color:#40344b66">Vlog memories</span></div>
+      </div>
+      <div class="travel-stamp" aria-label="Travel stamp">✈</div>
+    </div>
+  </section>
+
+  <section class="reveal" id="next">
+    <div class="eyebrow">07 / Still becoming</div>
+    <div class="quote-mark">“</div>
+    <p class="quote">I'm building a future with both sides of me in it: the part that loves to solve problems, and the part that wants to make something beautiful.</p>
+    <p class="section-intro">Learning, creating, travelling when I can, finding my next favourite show, and staying curious about what comes next.</p>
+    <a class="button" href="#home">Back to the beginning ↑</a>
+  </section>
+</main>
+
+<footer>
+  <p>Made with curiosity, creativity & a little scrapbook magic ✿</p>
+  <p>Archana Mishra · iLEAD 2027 · Still becoming.</p>
+</footer>
+
+<script>
+// No galaxy background here — just paper, tape, and scrapbook-style cards.
+
+/* Animated intro typing */
+const phrases = ["an engineer in progress ✦", "a creative mind ✿", "a collector of stories ♡"];
+let phraseIndex = 0, charIndex = 0, deleting = false;
+function typeText() {
+  const el = document.getElementById("typing");
+  if (!el) return;
+  const phrase = phrases[phraseIndex];
+  el.textContent = phrase.substring(0, charIndex);
+  if (!deleting && charIndex < phrase.length) {
+    charIndex++;
+    setTimeout(typeText, 78);
+  } else if (deleting && charIndex > 0) {
+    charIndex--;
+    setTimeout(typeText, 38);
+  } else {
+    deleting = !deleting;
+    if (!deleting) phraseIndex = (phraseIndex + 1) % phrases.length;
+    setTimeout(typeText, deleting ? 900 : 250);
+  }
+}
+typeText();
+
+/* Reveal sections as they enter view */
+if ("IntersectionObserver" in window) {
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {threshold: .10});
+  document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
+} else {
+  document.querySelectorAll(".reveal").forEach(el => el.classList.add("visible"));
+}
+
+/* Small local-time detail */
+function updateClock() {
+  const el = document.getElementById("clock");
+  if (el) el.textContent = "A little moment in time · " +
+    new Date().toLocaleTimeString([], {hour: "2-digit", minute: "2-digit"});
+}
+updateClock();
+setInterval(updateClock, 30000);
+</script>
+</body>
+</html>
